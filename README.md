@@ -1,6 +1,6 @@
 # 🧠 Customer Segmentation — Навчання без вчителя (Unsupervised Learning)
 
-Проєкт з аналізу та сегментації клієнтів на основі демографічних даних та історії покупок. Використано методи **EDA**, **feature engineering** та три алгоритми кластеризації: **K-Means**, **Mean Shift** та **DBSCAN**, з візуалізацією результатів через **PCA**.
+Проєкт з аналізу та сегментації клієнтів на основі демографічних даних та історії покупок. Використано методи **EDA**, **feature engineering** та три алгоритми кластеризації: **K-Means**, **Mean Shift** та **DBSCAN**, з візуалізацією результатів через **PCA**. Посилання на проєкт в середовищі Colab https://colab.research.google.com/drive/1QtqjwTKelFy0j8XwtVvArcUaKY0_CzGz#scrollTo=FZbdd1gXu3sp
 
 ---
 
