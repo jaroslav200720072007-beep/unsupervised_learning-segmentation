@@ -17,7 +17,6 @@
   - [5. Кластеризація](#5-кластеризація)
   - [6. Зниження розмірності та візуалізація кластерів (PCA)](#6-зниження-розмірності-та-візуалізація-кластерів-pca)
 - [Результати](#-результати)
-- [Як запустити проєкт](#-як-запустити-проєкт)
 - [Автор](#-автор)
 
 ---
@@ -101,8 +100,7 @@ df['Dt_Customer'] = pd.to_datetime(df['Dt_Customer'], dayfirst=True)
 sns.histplot(df["Age"], bins=30, kde=True)
 ```
 
-![Розподіл віку](<img width="710" height="460" alt="Снимок экрана — 2026-09-14 в 17 07 21" src="https://github.com/user-attachments/assets/47bf29bc-db1b-464b-be85-a76b7f327627" />
-)
+<img width="710" height="460" alt="Снимок экрана — 2026-09-14 в 17 07 21" src="https://github.com/user-attachments/assets/47bf29bc-db1b-464b-be85-a76b7f327627" />
 
 
 **Загальні витрати клієнтів:**
@@ -111,8 +109,8 @@ sns.histplot(df["Age"], bins=30, kde=True)
 sns.histplot(df['Total_Spending'], bins=30, kde=True)
 ```
 
-![Загальні витрати](<img width="720" height="471" alt="Снимок экрана — 2026-09-14 в 17 06 42" src="https://github.com/user-attachments/assets/56399f6e-b976-4e22-a2bd-9cb940031fc5" />
-)
+<img width="720" height="471" alt="Снимок экрана — 2026-09-14 в 17 06 42" src="https://github.com/user-attachments/assets/56399f6e-b976-4e22-a2bd-9cb940031fc5" />
+
 
 **Витрати залежно від сімейного стану:**
 
@@ -120,8 +118,8 @@ sns.histplot(df['Total_Spending'], bins=30, kde=True)
 sns.boxplot(x="Marital_Status", y="Total_Spending", data=df)
 ```
 
-![Витрати vs Сімейний стан](<img width="658" height="448" alt="Снимок экрана — 2026-09-14 в 17 05 32" src="https://github.com/user-attachments/assets/d0591387-a740-433e-946d-05127de98161" />
-)
+<img width="658" height="448" alt="Снимок экрана — 2026-09-14 в 17 05 32" src="https://github.com/user-attachments/assets/d0591387-a740-433e-946d-05127de98161" />
+
 
 **Кореляційна матриця ключових ознак:**
 
@@ -132,7 +130,7 @@ corr = df[["Income", "Age", "Recency", "Total_Spending",
 sns.heatmap(corr, annot=True, cmap="coolwarm")
 ```
 
-![Кореляційна матриця](<img width="703" height="574" alt="Снимок экрана — 2026-09-14 в 17 04 56" src="https://github.com/user-attachments/assets/226263e6-2617-4635-8380-353a1a4cb08c" />)
+<img width="703" height="574" alt="Снимок экрана — 2026-09-14 в 17 04 56" src="https://github.com/user-attachments/assets/226263e6-2617-4635-8380-353a1a4cb08c" />
 
 **Середні витрати за рівнем освіти:**
 
@@ -141,8 +139,7 @@ group1 = df.groupby("Education")["Total_Spending"].mean().sort_values(ascending=
 group1.plot(kind="bar", color="skyblue")
 ```
 
-![Витрати за освітою](<img width="606" height="517" alt="Снимок экрана — 2026-09-14 в 17 04 29" src="https://github.com/user-attachments/assets/6c44d583-54fd-4576-ab7d-c07623460e55" />
-)
+<img width="606" height="517" alt="Снимок экрана — 2026-09-14 в 17 04 29" src="https://github.com/user-attachments/assets/6c44d583-54fd-4576-ab7d-c07623460e55" />
 
 **Середній дохід за віковими групами:**
 
@@ -155,8 +152,8 @@ group3 = df.groupby("AgeGroup")["Income"].mean()
 group3.plot(kind="barh", color="green")
 ```
 
-![Дохід за віковими групами](<img width="618" height="413" alt="Снимок экрана — 2026-09-14 в 17 03 59" src="https://github.com/user-attachments/assets/78fdd0e6-3d84-4a52-bc0d-026791ed82c3" />
-)
+<img width="618" height="413" alt="Снимок экрана — 2026-09-14 в 17 03 59" src="https://github.com/user-attachments/assets/78fdd0e6-3d84-4a52-bc0d-026791ed82c3" />
+
 
 ---
 
@@ -220,8 +217,7 @@ for k in range(1, 11):
 plt.plot(range(1, 11), wcss, marker='o')
 ```
 
-![Метод ліктя](<img width="692" height="420" alt="Снимок экрана — 2026-09-14 в 17 02 55" src="https://github.com/user-attachments/assets/24206304-3e59-4411-956b-c0e7f89c9610" />
-)
+<img width="692" height="420" alt="Снимок экрана — 2026-09-14 в 17 02 55" src="https://github.com/user-attachments/assets/24206304-3e59-4411-956b-c0e7f89c9610" />
 
 Найкраща кількість кластерів — **6**:
 
@@ -283,8 +279,8 @@ df['PCA2'] = pca_data[:, 1]
 sns.scatterplot(x="PCA1", y="PCA2", hue="Cluster_km", data=df)
 ```
 
-![K-Means кластери (PCA)](<img width="590" height="431" alt="Снимок экрана — 2026-09-14 в 17 02 07" src="https://github.com/user-attachments/assets/9a784189-b4d5-4c9f-b1b9-97deb7f0919d" />
-)
+<img width="590" height="431" alt="Снимок экрана — 2026-09-14 в 17 02 07" src="https://github.com/user-attachments/assets/9a784189-b4d5-4c9f-b1b9-97deb7f0919d" />
+
 
 **Кластери Mean Shift:**
 
@@ -298,7 +294,7 @@ df['pca2'] = data_2d[:, 1]
 sns.scatterplot(x=df['pca1'], y=df['pca2'], hue='Cluster_MeanShift', data=df)
 ```
 
-![Mean Shift кластери (PCA)](<img width="598" height="423" alt="Снимок экрана — 2026-09-14 в 17 01 12" src="https://github.com/user-attachments/assets/f41b8109-ec6e-4705-a73e-770cce9aa76b" />)
+<img width="598" height="423" alt="Снимок экрана — 2026-09-14 в 17 01 12" src="https://github.com/user-attachments/assets/f41b8109-ec6e-4705-a73e-770cce9aa76b" />
 
 **Кластери DBSCAN:**
 
