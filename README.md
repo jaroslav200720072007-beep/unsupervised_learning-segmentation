@@ -312,8 +312,8 @@ df['col2db'] = data_db[:, 1]
 sns.scatterplot(x='col1db', y='col2db', hue='Cluster_DBSCAN', data=df, palette='Set1')
 ```
 
-![DBSCAN кластери (PCA)](<img width="622" height="437" alt="Снимок экрана — 2026-09-14 в 17 00 19" src="https://github.com/user-attachments/assets/e4a29818-da5f-4cc4-977b-f8067dccdb59" />
-)
+<img width="622" height="437" alt="Снимок экрана — 2026-09-14 в 17 00 19" src="https://github.com/user-attachments/assets/e4a29818-da5f-4cc4-977b-f8067dccdb59" />
+
 
 ---
 
@@ -322,7 +322,6 @@ sns.scatterplot(x='col1db', y='col2db', hue='Cluster_DBSCAN', data=df, palette='
 - Виявлено **6 сегментів клієнтів** методом K-Means з різними профілями доходу, витрат та активності покупок.
 - Порівняно три підходи до кластеризації: **K-Means** (чіткі сферичні кластери), **Mean Shift** (автоматичний підбір кількості кластерів) та **DBSCAN** (виявлення шумових точок/аномалій).
 - Побудовано профілі кожного кластера (`cluster_summary`) для подальшого бізнес-аналізу та таргетування маркетингових кампаній.
-<img width="669" height="430" alt="Снимок экрана — 2026-09-14 в 16 59 50" src="https://github.com/user-attachments/assets/df5865b7-4baa-4e7d-8987-c2e4ae02000d" />
 
 
 ## 👤 Автор
